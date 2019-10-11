@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap");
+/* CSS Variables */
+:root {
+  --primary-color: #b90415;
+  --primary-color-hover: #d3071b;
+  --secondary-color: #103063;
+  --secondary-color-hover: #143f85;
+  --light-color: #f4f4f4;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "PT Sans", sans-serif;
+  background-color: #0f0f0f;
+  margin: 0;
+  color: #fff;
+  line-height: 1.6;
+}
+
+p {
+  font-size: 1.2em;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Navigation */
+
+nav {
+  height: 80px;
+  width: 100%;
+  background-color: rgba(17, 17, 17, 0.7);
+  color: #eee;
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  display: inline;
+}
+nav a {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  padding: 26px 0;
+  color: #eee;
+  text-decoration: none;
+  font-weight: 700;
+}
+nav li a:hover {
+  color: var(--primary-color-hover);
+  border-bottom: 3px solid #fff;
+}
+nav a#openup {
+  display: none;
+}
+
+.logo {
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+  margin-top: -21px;
+  color: var(--primary-color);
+}
+
+.logo:hover {
+  color: var(--primary-color-hover);
+}
+
+/* Showcase */
+
+.showcase {
+  background: url("bike.jpg") no-repeat center/cover;
+  height: 100vh;
+}
+
+.lead {
+  font-family: "Oswald", sans-serif;
+  color: var(--light-color);
+  line-height: 1.1;
+  padding: 10px;
+}
+.lead-1 {
+  font-size: 4em;
+  margin: 20vh 0 0 19vh;
+}
+.lead-3 {
+  font-size: 1.6em;
+  margin: 1vh 0 0 28vh;
+}
+
+/* Show */
+
+.lead-sh {
+  font-size: 3em;
+}
+
+.btn {
+  padding: 1rem;
+  margin-bottom: 5vh;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  text-align: center;
+  display: inline-block;
+  font-size: 1.3em;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-hover);
+  color: var(--light-color);
+  transition: 0.4s;
+}
+
+.btn-low {
+  background-color: var(--secondary-color);
+  color: #f4f4f4;
+}
+
+.btn-low:hover {
+  background-color: var(--secondary-color-hover);
+  color: var(--light-color);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.cnt {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.lead-item {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.show-item {
+  position: relative;
+  top: 10%;
+  padding: 0 5rem;
+}
+
+.show {
+  text-align: center;
+}
+
+.harley-1 {
+  padding: 50px 0 0 0;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  height: 25rem;
+  background: #222;
+}
+
+.info {
+  margin: 5vh 0 0 15vw;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.about {
+  font-size: 20px;
+  margin-top: 5vh;
+}
+
+.about ul li:first-child {
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 2px #f4f4f4;
+  margin-bottom: 10px;
+  width: 200px;
+}
+.about ul li a {
+  color: #999;
+}
+.about ul li a:hover {
+  color: white;
+}
+
+.social i {
+  margin-right: 1rem;
+  color: #999;
+}
+.social i:hover {
+  color: white;
+}
+
+.copy {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+  padding: 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .hide-on-small {
+    display: none;
+  }
+
+  nav {
+    height: auto;
+    border-bottom: 0;
+  }
+  nav ul {
+    display: none;
+    height: auto;
+  }
+  nav li {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+  nav a {
+    text-align: left;
+    width: 100%;
+    text-indent: 25px;
+    border-bottom: 1px solid #555;
+  }
+
+  nav a#openup:after {
+    content: url(icc.png);
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 55px;
+    top: 30px;
+  }
+
+  nav a#openup {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .cnt {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .lead{
+    font-size: 3em;
+  }
+
+  .lead-1 {
+    margin: 20vh 0 0 5vw;
+  }
+  .lead-3{
+  margin-left:5vw;
+  font-size: 2rem;
+  }
+  
+}
+@media screen and (max-width: 580px){
+.footer {
+    display: none;
+  }
+}
+
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
